@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+:root{
+    --main-font: 'Epilogue', sans-serif;
+    --color-almost-white: hsl(0, 0%, 98%);
+    --color-almost-gray: hsl(0, 0%, 41%);
+    --color-almost-black: hsl(0, 0%, 8%);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: var(--main-font);
+}
+
+@import url('./Navbar.css');
+@import url('./Home.css');
