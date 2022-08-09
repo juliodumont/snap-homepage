@@ -9,16 +9,22 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link rel="stylesheet" href="./styles/App.css" />
     <title>Snap</title>
   </head>
   <body>
     <header class="navbar-container">
-      <nav class="main-nav-container">
-        <div class="logo-container">
-          <a href="#"><img src="./assets/images/logo.svg" alt="Snap logo" /></a>
-        </div>
+      <nav class="main-nav-container flex-container">
+        <button class="nav-toggler">
+          <span class="toggler-icon"></span>
+        </button>
         <div class="main-nav">
-          <ul class="nav-links-container">
+          <div class="logo-container">
+            <a href="#"
+              ><img src="./assets/images/logo.svg" alt="Snap logo"
+            /></a>
+          </div>
+          <ul class="links-container flex-container">
             <li class="nav-link"><a href="#">Features</a></li>
             <li class="nav-link"><a href="#">Company</a></li>
             <li class="nav-link"><a href="#">Features</a></li>
@@ -26,34 +32,57 @@
           </ul>
         </div>
         <div class="user-access">
-          <li class="nav-link"><a href="#">Login</a></li>
-          <li class="nav-link"><a href="#">Register</a></li>
+          <ul class="links-container flex-container">
+            <li class="nav-link"><a href="#">Login</a></li>
+            <li class="nav-link"><a href="#">Register</a></li>
+          </ul>
         </div>
       </nav>
     </header>
     <main class="main-container">
       <section class="introduction-container">
         <article class="introduction">
-          <h1>Make remote work</h1>
-          <p>
-            Get your team in sync. no matter your location. Streamline
-            processses, create tema rituals, and watch productivity soar.
-          </p>
+          <div class="introduction-text-container">
+            <h1>Make remote work</h1>
+            <p>
+              Get your team in sync. no matter your location. Streamline
+              processses, create tema rituals, and watch productivity soar.
+            </p>
+          </div>
           <div class="introduction-button-container">
             <button class="introduction-button">Learn more</button>
           </div>
           <div class="clients-container">
-            <img src="./assets/images/client-databiz.svg" alt="Databiz logo" />
             <img
+              name="databiz-logo"
+              src="./assets/images/client-databiz.svg"
+              alt="Databiz logo"
+            />
+            <img
+              name="audiophile-logo"
               src="./assets/images/client-audiophile.svg"
               alt="Audiophile logo"
             />
-            <img src="./assets/images/client-maker.svg" alt="Maker logo" />
-            <img src="./assets/images/client-meet.svg" alt="Meet logo" />
+            <img
+              name="meet-logo"
+              src="./assets/images/client-meet.svg"
+              alt="Meet logo"
+            />
+            <img
+              name="maker-logo"
+              src="./assets/images/client-maker.svg"
+              alt="Maker logo"
+            />
           </div>
         </article>
         <div class="introduction-image">
-          <img src="./assets/images/image-hero-desktop.png" alt="" />
+          <picture>
+            <source
+              srcset="./assets/images/image-hero-desktop.png"
+              media="(min-width: 768px)"
+            />
+            <img src="./assets/images/image-hero-mobile.png" alt="" />
+          </picture>
         </div>
       </section>
     </main>
