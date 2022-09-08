@@ -1,23 +1,23 @@
 .snap-header {
   display: flex;
-  padding: 1.3125rem 2.5rem;
+  align-items: center;
+  padding: 1.3125rem 1.5rem;
 }
 
 .logo {
   color: var(--almost-black);
-  margin-right: 4rem;
+  flex: 1;
 }
 
 .nav-container {
-  flex: 1;
   display: flex;
   align-items: center;
-
   justify-content: space-between;
 }
 
+.auth-nav-container,
 .main-nav-container {
-  display: flex;
+  display: none;
 }
 
 .nav-items-container {
@@ -25,8 +25,8 @@
   display: flex;
   list-style-type: none;
   align-items: center;
-  font-size: 1.125rem;
-  gap: 2.75rem;
+  font-size: 1rem;
+  gap: 1.2rem;
 }
 
 .nav-items-container a {
@@ -47,4 +47,43 @@
 
 .auth-nav-container li:last-child:hover {
   border: 1px solid var(--almost-black);
+}
+
+.arrow-up {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-container {
+    flex: 1;
+  }
+
+  .nav-button {
+    display: none;
+  }
+
+  .logo {
+    flex: unset;
+    margin-right: 2rem;
+  }
+
+  .auth-nav-container,
+  .main-nav-container {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .snap-header {
+    padding: 1.3125rem 2.5rem;
+  }
+
+  .logo {
+    margin-right: 4rem;
+  }
+
+  .nav-items-container {
+    font-size: 1.125rem;
+    gap: 2.75rem;
+  }
 }
