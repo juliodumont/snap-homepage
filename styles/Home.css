@@ -1,0 +1,113 @@
+main {
+  padding-bottom: 3rem;
+}
+
+.app-flex {
+  display: flex;
+  justify-content: center;
+  height: fit-content;
+}
+
+.main-container {
+  flex: 1;
+  align-items: center;
+  flex-direction: column-reverse;
+
+  max-width: 1140px;
+}
+
+.about-container {
+  padding-top: 3.125rem;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  padding: 0rem 1.2rem;
+}
+
+.about h1 {
+  font-size: 2.225rem;
+  margin-bottom: 2.5rem;
+  color: var(--almost-black);
+}
+
+.about p {
+  font-size: 0.875rem;
+  margin-bottom: 2.5rem;
+  max-width: 350px;
+  text-align: justify;
+}
+
+.about button {
+  padding: 1.25rem 1.875rem;
+  background-color: var(--almost-black);
+  color: #fff;
+  border: 1px solid var(--almost-black);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  width: 10.25rem;
+}
+
+.about button:hover {
+  color: var(--almost-black);
+  background-color: #fff;
+}
+
+.about-brands {
+}
+
+.about-image-container {
+  max-width: 480px;
+  flex: 1;
+}
+
+.about-image-container img {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    padding: 0rem 2rem 2rem 2rem;
+  }
+
+  .main-container {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+
+  .about-container {
+    padding-top: 6.125rem;
+  }
+
+  .about {
+    padding: 0rem;
+  }
+
+  .about p {
+    font-size: 1rem;
+    max-width: 450px;
+  }
+
+  .about-image-container {
+    flex: 1 370px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .about-container {
+    padding-top: 8.125rem;
+  }
+
+  .about h1 {
+    font-size: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  .about p {
+    font-size: 1.125rem;
+    margin-bottom: 3.5rem;
+  }
+}

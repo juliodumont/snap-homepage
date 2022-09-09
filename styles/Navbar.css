@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   padding: 1.3125rem 1.5rem;
+  position: relative;
 }
 
 .logo {
@@ -10,23 +11,23 @@
 }
 
 .nav-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.auth-nav-container,
-.main-nav-container {
-  display: none;
+  position: absolute;
+  z-index: 10;
+  background-color: #fff;
+  top: 4.5625rem;
+  right: 0rem;
+  top: 0;
+  visibility: hidden;
+  height: calc(100vh - 73px);
 }
 
 .nav-items-container {
   flex: 1;
   display: flex;
+  flex-direction: column;
   list-style-type: none;
-  align-items: center;
   font-size: 1rem;
-  gap: 1.2rem;
+  gap: 2rem;
 }
 
 .nav-items-container a {
@@ -38,8 +39,18 @@
   color: var(--almost-black);
 }
 
+.main-nav-container {
+  margin-bottom: 2.5rem;
+  padding: 0.875rem 0.75rem;
+}
+
+.auth-nav-container ul {
+  align-items: center;
+  gap: 1.25rem;
+}
+
 .auth-nav-container li:last-child {
-  padding: 0.875rem 1.5rem;
+  padding: 0.875rem 3.3125rem;
   border: 1px solid var(--almost-gray);
   border-radius: 12px;
   transition: all 0.3s ease;
@@ -53,13 +64,41 @@
   display: none;
 }
 
+@media screen and (min-width: 576px) {
+  .auth-nav-container li:last-child {
+    padding: 0.875rem 4.3125rem;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .nav-container {
     flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: unset;
+    height: unset;
+    visibility: visible;
+    transition: unset;
   }
 
-  .nav-button {
+  .nav-items-container {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  .main-nav-container {
+    margin-bottom: 0rem;
+    padding: 0rem;
+  }
+
+  .nav-buttons-container {
     display: none;
+  }
+
+  .auth-nav-container li:last-child {
+    padding: 0.875rem 1.5rem;
   }
 
   .logo {
@@ -67,15 +106,16 @@
     margin-right: 2rem;
   }
 
-  .auth-nav-container,
-  .main-nav-container {
-    display: flex;
+  .company-dropdown-menu,
+  .feature-dropdown-menu {
+    position: absolute;
   }
 }
 
 @media screen and (min-width: 992px) {
   .snap-header {
     padding: 1.3125rem 2.5rem;
+    margin-bottom: 1.25rem;
   }
 
   .logo {
@@ -85,5 +125,43 @@
   .nav-items-container {
     font-size: 1.125rem;
     gap: 2.75rem;
+  }
+}
+
+/**/
+
+.hidden {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .toggle-menu {
+    animation: togglemenu 0.5s ease forwards;
+  }
+}
+
+.mobile-menu-modal {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 40%;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.company-dropdown-menu,
+.feature-dropdown-menu {
+  display: none;
+}
+
+@keyframes togglemenu {
+  from {
+    width: 0;
+  }
+
+  to {
+    visibility: visible;
+    width: 60%;
   }
 }

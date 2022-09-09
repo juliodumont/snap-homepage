@@ -23,14 +23,19 @@
       <div class="logo">
         <img src="./assets/images/logo.svg" alt="" />
       </div>
-      <div class="nav-button">
-        <img src="./assets/images/icon-menu.svg" alt="" />
+      <div class="nav-buttons-container">
+        <img class="expand-button" src="./assets/images/icon-menu.svg" alt="" />
       </div>
       <nav class="nav-container">
         <div class="main-nav-container">
+          <img
+            class="close-button hidden"
+            src="./assets/images/icon-close-menu.svg"
+            alt=""
+          />
           <ul class="nav-items-container">
             <li>
-              <a href="#"
+              <a href="#" id="features"
                 >Features
                 <img src="./assets/images/icon-arrow-down.svg" alt="" />
                 <img
@@ -39,9 +44,17 @@
                   alt=""
                 />
               </a>
+              <div class="feature-dropdown-menu">
+                <ul>
+                  <li>Todo List</li>
+                  <li>Calendar</li>
+                  <li>Reminders</li>
+                  <li>Planning</li>
+                </ul>
+              </div>
             </li>
             <li>
-              <a href="#"
+              <a href="#" id="company"
                 >Company
                 <img src="./assets/images/icon-arrow-down.svg" alt="" />
                 <img
@@ -49,6 +62,13 @@
                   src="./assets/images/icon-arrow-up.svg"
                   alt=""
               /></a>
+              <div class="company-dropdown-menu">
+                <ul>
+                  <li>History</li>
+                  <li>Our Team</li>
+                  <li>Blog</li>
+                </ul>
+              </div>
             </li>
             <li><a href="#">Careers</a></li>
             <li><a href="#">About</a></li>
@@ -62,5 +82,34 @@
         </div>
       </nav>
     </header>
+    <main class="app-flex">
+      <div class="main-container app-flex">
+        <section class="about-container">
+          <div class="about">
+            <h1>
+              Make <br />
+              remote work
+            </h1>
+            <p>
+              Get your team in sync, no matter your location. Streamline
+              processes, create team rituals, and watch productivity soar.
+            </p>
+            <button>Learn more</button>
+          </div>
+          <div class="about-brands"></div>
+        </section>
+        <div class="about-image-container">
+          <picture>
+            <source
+              srcset="./assets/images/image-hero-desktop.png"
+              media="(min-width: 768px)"
+            />
+            <img src="./assets/images/image-hero-mobile.png" alt="" />
+          </picture>
+        </div>
+      </div>
+    </main>
+    <div class="mobile-menu-modal hidden"></div>
+    <script src="./scripts/event-handler.js"></script>
   </body>
 </html>
