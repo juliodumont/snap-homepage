@@ -1,3 +1,5 @@
+import * as MobileMenuHandler from "./mobile-menu-event-handler.js";
+
 function State() {
   this.container = null;
 }
@@ -17,8 +19,13 @@ export function hideModal() {
   state.container.classList.remove("active");
 }
 
+export function toggleModal() {
+  state.container.classList.toggle("active");
+}
+
 function handleContainerClick(event) {
   if (this == event.target) {
     hideModal();
+    MobileMenuHandler.toggleMenu();
   }
 }

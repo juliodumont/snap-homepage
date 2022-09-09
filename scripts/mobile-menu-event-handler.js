@@ -1,25 +1,29 @@
-const menuButtons = [
-  document.querySelector(".expand-button"),
-  document.querySelector(".close-button"),
-];
-
-const modal = document.querySelector(".mobile-menu-modal");
-const navContainer = document.querySelector(".nav-container");
-
-const handleButtonClick = () => {
-  menuButtons.forEach((button) => button.classList.toggle("hidden"));
-  navContainer.classList.toggle("toggle-menu");
-  modal.classList.toggle("hidden");
-};
-
-menuButtons.forEach((button) =>
-  button.addEventListener("click", handleButtonClick)
-);
+import * as modalController from "./modal-handler.js";
 
 function State() {
+  this.menuButtons = null;
   this.container = null;
 }
 
 const state = new State();
 
-export function init() {}
+export function init() {
+  state.menuButtons = [
+    document.querySelector(".expand-button"),
+    document.querySelector(".close-button"),
+  ];
+  state.menuButtons.forEach((button) =>
+    button.addEventListener("click", handleButtonClick)
+  );
+  state.container = document.querySelector(".nav-container");
+}
+
+export const toggleMenu = () => {
+  state.menuButtons.forEach((button) => button.classList.toggle("hidden"));
+  state.container.classList.toggle("toggle-menu");
+};
+
+const handleButtonClick = () => {
+  toggleMenu();
+  modalController.toggleModal();
+};
