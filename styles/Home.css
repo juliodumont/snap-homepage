@@ -12,7 +12,6 @@ main {
   flex: 1;
   align-items: center;
   flex-direction: column-reverse;
-
   max-width: 1140px;
 }
 
@@ -28,13 +27,13 @@ main {
 
 .about h1 {
   font-size: 2.225rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.25rem;
   color: var(--almost-black);
 }
 
 .about p {
   font-size: 0.875rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   max-width: 350px;
   text-align: justify;
 }
@@ -48,6 +47,7 @@ main {
   transition: all 0.3s ease;
   cursor: pointer;
   width: 10.25rem;
+  margin-bottom: 3rem;
 }
 
 .about button:hover {
@@ -56,6 +56,23 @@ main {
 }
 
 .about-brands {
+  display: flex;
+  max-width: 380px;
+  padding: 0rem 1.2rem;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.about-brands div:first-child {
+  flex: 1.35;
+}
+
+.about-brands div {
+  flex: 1;
+}
+
+.about-brands img {
+  width: 100%;
 }
 
 .about-image-container {
@@ -86,9 +103,18 @@ main {
     padding: 0rem;
   }
 
+  .about h1 {
+    margin-bottom: 2.5rem;
+  }
+
   .about p {
     font-size: 1rem;
+    margin-bottom: 2.5rem;
     max-width: 450px;
+  }
+
+  .about button {
+    margin-bottom: 5rem;
   }
 
   .about-image-container {
@@ -109,5 +135,13 @@ main {
   .about p {
     font-size: 1.125rem;
     margin-bottom: 3.5rem;
+  }
+
+  .about button {
+    margin-bottom: 7rem;
+  }
+
+  .about-brands {
+    max-width: 480px;
   }
 }
