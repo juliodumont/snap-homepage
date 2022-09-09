@@ -1,3 +1,5 @@
+@import url("./Brands/Brands.css");
+
 main {
   padding-bottom: 3rem;
 }
@@ -53,26 +55,6 @@ main {
 .about button:hover {
   color: var(--almost-black);
   background-color: #fff;
-}
-
-.about-brands {
-  display: flex;
-  max-width: 380px;
-  padding: 0rem 1.2rem;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.about-brands div:first-child {
-  flex: 1.35;
-}
-
-.about-brands div {
-  flex: 1;
-}
-
-.about-brands img {
-  width: 100%;
 }
 
 .about-image-container {
@@ -139,9 +121,5 @@ main {
 
   .about button {
     margin-bottom: 7rem;
-  }
-
-  .about-brands {
-    max-width: 480px;
   }
 }

@@ -37,32 +37,54 @@
             <li>
               <a href="#" id="features"
                 >Features
-                <img src="./assets/images/icon-arrow-down.svg" alt="" />
                 <img
-                  class="arrow-up"
+                  class="dropdown-arrow"
+                  src="./assets/images/icon-arrow-down.svg"
+                  alt=""
+                />
+                <img
+                  class="hidden dropdown-arrow"
                   src="./assets/images/icon-arrow-up.svg"
                   alt=""
                 />
               </a>
-              <div class="feature-dropdown-menu">
+              <div class="feature-dropdown-menu dropdown-menu">
                 <ul>
-                  <li>Todo List</li>
-                  <li>Calendar</li>
-                  <li>Reminders</li>
-                  <li>Planning</li>
+                  <li>
+                    <img src="./assets/images/icon-todo.svg" alt="" /> Todo List
+                  </li>
+                  <li>
+                    <img
+                      src="./assets/images/icon-calendar.svg"
+                      alt=""
+                    />Calendar
+                  </li>
+                  <li>
+                    <img
+                      src="./assets/images/icon-reminders.svg"
+                      alt=""
+                    />Reminders
+                  </li>
+                  <li>
+                    <img src="./assets/images/icon-reminders.svg" alt="" />
+                    Planning
+                  </li>
                 </ul>
               </div>
             </li>
             <li>
               <a href="#" id="company"
                 >Company
-                <img src="./assets/images/icon-arrow-down.svg" alt="" />
                 <img
-                  class="arrow-up"
+                  class="dropdown-arrow"
+                  src="./assets/images/icon-arrow-down.svg"
+                  alt="" />
+                <img
+                  class="hidden dropdown-arrow"
                   src="./assets/images/icon-arrow-up.svg"
                   alt=""
               /></a>
-              <div class="company-dropdown-menu">
+              <div class="company-dropdown-menu dropdown-menu">
                 <ul>
                   <li>History</li>
                   <li>Our Team</li>
@@ -122,7 +144,7 @@
         </div>
       </div>
     </main>
-    <div class="mobile-menu-modal hidden"></div>
-    <script src="./scripts/event-handler.js"></script>
+    <div class="mobile-menu-modal"></div>
+    <script type="module" src="./scripts/event-handlers.js"></script>
   </body>
 </html>

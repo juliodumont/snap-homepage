@@ -1,22 +1,5 @@
-.snap-header {
-  display: flex;
-  align-items: center;
-  padding: 1.3125rem 1.5rem;
-  position: relative;
-}
-
-.logo {
-  color: var(--almost-black);
-  flex: 1;
-  transition: all 0.3s ease;
-}
-
-.logo:hover {
-  opacity: 0.8;
-}
-
 .nav-container {
-  position: absolute;
+  position: fixed;
   z-index: 10;
   background-color: #fff;
   top: 4.5625rem;
@@ -35,6 +18,10 @@
   gap: 2rem;
 }
 
+.nav-items-container > li {
+  position: relative;
+}
+
 .nav-items-container a {
   text-decoration: none;
   transition: all 0.3s ease;
@@ -47,6 +34,8 @@
 .main-nav-container {
   margin-bottom: 2.5rem;
   padding: 0.875rem 0.75rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .auth-nav-container ul {
@@ -75,79 +64,17 @@
   }
 }
 
-@media screen and (min-width: 768px) {
-  .nav-container {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: unset;
-    height: unset;
-    visibility: visible;
-    transition: unset;
-  }
-
-  .nav-items-container {
-    flex-direction: row;
-    align-items: center;
-    gap: 1.2rem;
-  }
-
-  .main-nav-container {
-    margin-bottom: 0rem;
-    padding: 0rem;
-  }
-
-  .nav-buttons-container {
-    display: none;
-  }
-
-  .auth-nav-container li:last-child {
-    padding: 0.875rem 1.5rem;
-  }
-
-  .logo {
-    flex: unset;
-    margin-right: 2rem;
-  }
-
-  .company-dropdown-menu,
-  .feature-dropdown-menu {
-    position: absolute;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .snap-header {
-    padding: 1.3125rem 2.5rem;
-    margin-bottom: 1.25rem;
-  }
-
-  .logo {
-    margin-right: 4rem;
-  }
-
-  .nav-items-container {
-    font-size: 1.125rem;
-    gap: 2.75rem;
-  }
-}
-
-/**/
-
-.hidden {
-  display: none;
-}
-
 @media screen and (max-width: 768px) {
   .toggle-menu {
+    height: 100vh;
     animation: togglemenu 0.5s ease forwards;
   }
 }
 
 .mobile-menu-modal {
+  display: none;
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 40%;
   bottom: 0;
@@ -155,9 +82,8 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.company-dropdown-menu,
-.feature-dropdown-menu {
-  display: none;
+.mobile-menu-modal.active {
+  display: block;
 }
 
 @keyframes togglemenu {

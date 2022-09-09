@@ -1,5 +1,5 @@
-@import url("./Navbar.css");
-@import url("./Home.css");
+@import url("./Navbar/Navbar.css");
+@import url("./Home/Home.css");
 
 :root {
   --main-font: "Epilogue", sans-serif;

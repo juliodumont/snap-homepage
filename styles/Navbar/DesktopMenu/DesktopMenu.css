@@ -1,0 +1,38 @@
+@media screen and (min-width: 768px) {
+  .nav-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: unset;
+    height: unset;
+    visibility: visible;
+    transition: unset;
+  }
+
+  .nav-items-container {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  .main-nav-container {
+    margin-bottom: 0rem;
+    padding: 0rem;
+  }
+
+  .nav-buttons-container {
+    display: none;
+  }
+
+  .auth-nav-container li:last-child {
+    padding: 0.875rem 1.5rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .nav-items-container {
+    font-size: 1.125rem;
+    gap: 2.75rem;
+  }
+}

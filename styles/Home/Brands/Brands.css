@@ -1,0 +1,25 @@
+.about-brands {
+  display: flex;
+  max-width: 380px;
+  padding: 0rem 1.2rem;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.about-brands div:first-child {
+  flex: 1.35;
+}
+
+.about-brands div {
+  flex: 1;
+}
+
+.about-brands img {
+  width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+  .about-brands {
+    max-width: 480px;
+  }
+}
