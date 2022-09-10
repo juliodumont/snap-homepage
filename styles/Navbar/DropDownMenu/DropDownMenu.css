@@ -3,6 +3,10 @@
   font-size: 0.875rem;
 }
 
+.dropdown-menu.active {
+  display: unset;
+}
+
 .dropdown-menu img {
   margin-right: 0.875rem;
 }
@@ -20,6 +24,11 @@
   display: flex;
 }
 
+.dropdown-menu li:hover {
+  color: var(--almost-black);
+  transform: scale(1.1);
+}
+
 .close-button {
   margin-bottom: 2rem;
   align-self: flex-end;
@@ -35,6 +44,11 @@
     right: 0;
     top: 2rem;
     margin-top: 0rem;
+  }
+
+  .dropdown-menu ul {
+    margin-top: 0;
+    padding-left: 0;
   }
 
   .company-dropdown-menu {

@@ -18,15 +18,19 @@
   gap: 2rem;
 }
 
+.nav-items-container span,
 .nav-items-container > li {
+  cursor: pointer;
   position: relative;
 }
 
+.nav-items-container span,
 .nav-items-container a {
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
+.nav-items-container span:hover,
 .nav-items-container a:hover {
   color: var(--almost-black);
 }
@@ -56,6 +60,10 @@
 
 .arrow-up {
   display: none;
+}
+
+#features:hover .mobile-menu-modal {
+  display: block;
 }
 
 @media screen and (min-width: 576px) {
